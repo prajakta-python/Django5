@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Page</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Page Background */
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 30px 20px;
+        }
+
+        /* Registration Card */
+        .registration-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header */
+        .registration-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 18px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .registration-header h1 {
+            color: #2d3748;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .registration-header p {
+            color: #718096;
+            font-size: 14px;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #2d3748;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #dfe3eb;
+            border-radius: 10px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+        }
+
+        .form-group input::placeholder {
+            color: #a0aec0;
+        }
+
+        /* Terms and Conditions */
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 5px 0 22px;
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .terms input {
+            margin-top: 3px;
+            accent-color: #667eea;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Registration Button */
+        .register-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .register-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+        }
+
+        .register-button:active {
+            transform: translateY(0);
+        }
+
+        /* Login Link */
+        .login-text {
+            margin-top: 22px;
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .registration-container {
+                padding: 28px 22px;
+            }
+
+            .registration-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="registration-container">
+
+        <div class="registration-header">
+            <div class="logo">R</div>
+            <h1>Create Account</h1>
+            <p>Join us today! Create your account to get started.</p>
+        </div>
+
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    autocomplete="tel"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    title="Please enter a 10-digit phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm_password"
+                    placeholder="Confirm your password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+            </div>
+
+            <label class="terms">
+                <input type="checkbox" name="terms" required>
+                <span>
+                    I agree to the
+                    <a href="#">Terms and Conditions</a>
+                    and
+                    <a href="#">Privacy Policy</a>.
+                </span>
+            </label>
+
+            <button type="submit" class="register-button">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="login.html">Sign In</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
