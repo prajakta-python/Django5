@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102,126,234,0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 75px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #5145b5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Create Profile</h2>
+    {% comment %} <div class="container">
+
+        <h2>Create Profile</h2>
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" name="city" placeholder="Enter your city" required>
+            </div>
+
+            <div class="form-group">
+                <label>Roll Number</label>
+                <input type="number" name="roll" placeholder="Enter roll number" required>
+            </div>
+
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" name="state" placeholder="Enter your state" required>
+            </div>
+
+            <div class="form-group">
+                <label>Comment</label>
+                <textarea name="comment" placeholder="Write your comment..."></textarea>
+            </div>
+
+            <button type="submit">Save Profile</button>
+
+        </form>
+
+    </div> {% endcomment %}
+
+
+    {{singleProfile}}
+
+    
+
+</body>
+</html>
